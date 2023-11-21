@@ -6,13 +6,14 @@
     <title>Bhavya Chopra</title>
     <style>
         body {
-            font-family: Lato, sans-serif;
+            font-family: "Roboto", sans-serif;
+            font-weight: 360;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4; 
         }
         
-        p{
+        p {
             line-height: 1.275;
         }
 
@@ -23,42 +24,54 @@
         }
 
         .sidebar {
-            width: 25%;
-            /* background-color: #e6e6e6;  */
+            width: 20%;
             padding: 20px;
-            margin-left:10%;
+            margin-left: 5%;
         }
 
         .bio {
-            width: 40%;
+            width: 60%;
             padding: 20px;
-            /* background-color: white; */
         }
 
         .profile-pic {
             max-width: 100%;
             height: auto;
-            border-radius: 50%;
+            border-radius: 10%;
             margin-bottom: 20px;
         }
 
-        .publications {
-            padding: 10px;
-            /* background-color: #ffffff; */
-            width: 50%;
-            margin-left: 25%;
-            margin-right: auto;
-        }
-
         /* Style links */
-        .sidebar a {
+        a {
             margin-bottom: 10px;
             text-decoration: none;
-            color: #333; /* link color */
+            color: #0a95eb; /* link color */
         }
 
-        .sidebar a:hover {
-            color: #555; /* hover color */
+        a:hover {
+            color: #5900ff; /* hover color */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .bio {
+                width: 100%;
+            }
+        }
+
+        /* Additional styles for responsiveness */
+        @media (max-width: 768px) {
+            .sidebar {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -66,60 +79,86 @@
     <div class="container">
         <div class="sidebar">
             <img src="Bhavya_Chopra.png" alt="Profile Picture" class="profile-pic" style="max-width: 100%; max-height: 250px; display: block; margin: 0 auto;">
-            <h3 style="text-align: center;">Bhavya Chopra</h3>
+            <h2 style="text-align: center;">Bhavya Chopra</h2>
             <h4 style="text-align: center;">Research Fellow, Microsoft</h4>
-            <p style="text-align: center;"><a href="https://bhavyac16.github.io/Bhavya_Chopra_Resume.pdf">Resume</a> | <a href="https://scholar.google.com/citations?user=nYiKqtsAAAAJ&hl=en&authuser=1">Google Scholar</a> | <a href="https://twitter.com/BhavyaChopra1">Twitter</a> | <a href="https://www.linkedin.com/in/bhavya-chopra/">LinkedIn</a> | <a href="https://github.com/BhavyaC16">GitHub</a> </p>
+            <p style="text-align: center;">
+                <a href="https://bhavyac16.github.io/Bhavya_Chopra_Resume.pdf">CV</a> | 
+                <a href="https://scholar.google.com/citations?user=nYiKqtsAAAAJ&hl=en&authuser=1">Google Scholar</a> | 
+                <a href="https://twitter.com/BhavyaChopra1">Twitter</a> | 
+                <a href="https://www.linkedin.com/in/bhavya-chopra/">LinkedIn</a> | 
+                <a href="https://github.com/BhavyaC16">GitHub</a>
+            </p>
         </div>
         <div class="bio">
             <p>
-                Hello! I am Bhavya Chopra, a pre-doctoral Research Fellow with the <a href="https://www.microsoft.com/en-us/research/group/prose/">PROSE Team</a> at Microsoft, advised by <a href="https://austinhenley.com/">Dr. Austin Z. Henley</a>. I completed my bachelors in Computer Science and Design engineering (with honors) from IIIT-Delhi in 2022. </p>
+                Hello! I am Bhavya Chopra, a pre-doctoral Research Fellow with the <a href="https://www.microsoft.com/en-us/research/group/prose/">PROSE Team</a> at Microsoft, advised by <a href="https://austinhenley.com/">Dr. Austin Z. Henley</a>. I completed my bachelors in Computer Science and Design engineering (with honors) from <a href="">IIIT-Delhi</a> in 2022. </p>
                 
             <p>
-                My research interests lie at the intersection of Human-Computer Interaction (HCI), Software Engineering, designing Intelligent Systems, and Accessibility Design. I am interested in exploring and conducting mixed-methods research to design systems for end-users and developers. In particular, my recent work, advised by <a href="https://austinhenley.com/">Dr. Austin Henley</a>, <a href="http://www.chrisparnin.me/">Dr. Chris Parnin</a>, <a href="https://afariha.github.io/">Dr. Anna Fariha</a>, and <a href="https://www.microsoft.com/en-us/research/people/astiwar/">Dr. Ashish Tiwari</a>,  focuses on uncovering challenges in conversational and recommendation based AI systems for data science tasks. Currently, I am involved in leveraging findings to design productive human-AI experiences for Excel. 
+                My research interests lie in Human-Computer Interaction (HCI), Human-AI Interaction, and Software Engineering. I am interested in exploring and conducting mixed-methods research to design systems for end-users and developers. My recent research, advised by <a href="https://austinhenley.com/">Dr. Austin Z. Henley</a>, <a href="http://www.chrisparnin.me/">Dr. Chris Parnin</a>, <a href="https://afariha.github.io/">Dr. Anna Fariha</a>, and <a href="https://www.microsoft.com/en-us/research/people/astiwar/">Dr. Ashish Tiwari</a>,  focuses on uncovering challenges in conversational and recommendation based AI systems for data science tasks. Currently, I am leveraging our research findings to design productive human-AI experiences for Excel. 
             </p>
 
             <p>
-                Prior to my research fellowship, I worked with <a href="https://iiitd.ac.in/richagupta">Prof. Richa Gupta</a> to design inclusive and frugal storytelling interfaces for children with blindness and visual impairment. I pursued my bachelor thesis under the guidance of <a href="https://iiitd.ac.in/purandare">Prof. Rahul Purandare</a>, where I leveraged program analysis techniques to understand how developers make use of assertions in Java open-source repositories. 
+                Prior to my current role, I worked in accessibility design with <a href="https://iiitd.ac.in/richagupta">Prof. Richa Gupta</a> to design an inclusive and frugal storytelling interface for children with blindness and visual impairment. I pursued my bachelor thesis under the guidance of <a href="https://iiitd.ac.in/purandare">Prof. Rahul Purandare</a>, where I used program analysis techniques to understand how developers make use of assertions in Java open-source repositories. 
             </p>
-        </div>
-    </div>
-
-    <!-- Publications Section -->
-    <div class="publications">
-        <h2>Publications</h2>
+            <br>
+            <h3>Publications</h3>
         <div>
             <p>
-                Conversational Challenges in AI-Powered Data Science: Obstacles, Needs, and Design Opportunities [<a href="https://arxiv.org/pdf/2310.16164.pdf">pdf</a>]<br>
-                <i><b><u>Bhavya Chopra</u></b>, Ananya Singha, Anna Fariha, Sumit Gulwani, Chris Parnin, Ashish Tiwari, Austin Z. Henley</i> <br>
-                [In submission] <br>
+                Conversational Challenges in AI-Powered Data Science: Obstacles, Needs, and Design Opportunities<br>
+                <i><u>Bhavya Chopra</u>, Ananya Singha, Anna Fariha, Sumit Gulwani, Chris Parnin, Ashish Tiwari, Austin Z. Henley</i> <br>
+                [In submission]<br>
+                [<a href="https://arxiv.org/pdf/2310.16164.pdf">pdf</a>]<br>
             </p>
 
             <p>
-                🏆 Detangler: Helping Data Scientists Explore, Understand, and Debug Data Wrangling Pipelines [<a href="https://austinhenley.com/pubs/Shrestha2023VLHCC_Detangler.pdf">pdf</a>]<br>
-                <i>Nischal Shrestha, <b><u>Bhavya Chopra</u></b>, Austin Z. Henley, Chris Parnin</i> <br>
+                🏆 Detangler: Helping Data Scientists Explore, Understand, and Debug Data Wrangling Pipelines<br>
+                <i>Nischal Shrestha, <u>Bhavya Chopra</u>, Austin Z. Henley, Chris Parnin</i> <br>
                 VL/HCC '23 • <b>Best Paper Award</b><br>
+                [<a href="https://bhavyac16.github.io/Detangler_VLHCC_2023.pdf">pdf</a>]<br>
             </p>
 
             <p>
-                CoWrangler: Recommender System for Data Wrangling Scripts [<a href="https://afariha.github.io/papers/CoWrangler_SIGMOD_2023.pdf">pdf</a>]<br>
-                <i><b><u>Bhavya Chopra</u></b>, Anna Fariha, Sumit Gulwani, Austin Z. Henley, Daniel Perelman, Mohammad Raza, Sherry Shi, Danny Simmons, Ashish Tiwari</i> <br>
+                CoWrangler: Recommender System for Data Wrangling Scripts<br>
+                <i><u>Bhavya Chopra</u>, Anna Fariha, Sumit Gulwani, Austin Z. Henley, Daniel Perelman, Mohammad Raza, Sherry Shi, Danny Simmons, Ashish Tiwari</i> <br>
                 SIGMOD '23 Demonstration<br>
+                [<a href="https://bhavyac16.github.io/CoWrangler_SIGMOD_Demo_2023.pdf">pdf</a>]<br>
             </p>
 
             <p>
-                StoryBox: Independent Multi-modal Interactive Storytelling for Children with Visual Impairment [<a href="https://bhavyac16.github.io/StoryBox_CHI_LBW_2022.pdf">pdf</a>]<br>
-                <i><b><u>Bhavya Chopra</u></b>, Richa Gupta</i> <br>
+                StoryBox: Independent Multi-modal Interactive Storytelling for Children with Visual Impairment<br>
+                <i><u>Bhavya Chopra</u>, Richa Gupta</i> <br>
                 CHI '22 Late-Breaking Work <br>
+                [<a href="https://bhavyac16.github.io/StoryBox_CHI_LBW_2022.pdf">pdf</a>]<br>
             </p>
 
             <p>
-                🥈 Reality Tales: Facilitating User-Character Interaction with Immersive Storytelling [<a href="https://bhavyac16.github.io/RealityTales_CHI_SRC_2021.pdf">pdf</a>]<br>
-                <i><b><u>Bhavya Chopra*</u></b>, Khushali Verma*, Sonali Singhal*, Utsav Singla*</i> <br>
+                🥈 Reality Tales: Facilitating User-Character Interaction with Immersive Storytelling<br>
+                <i><u>Bhavya Chopra*</u>, Khushali Verma*, Sonali Singhal*, Utsav Singla*</i> <br>
                 CHI '21 Student Research Competition • <b>Second Position (undergraduate category)</b><br>
+                [<a href="https://bhavyac16.github.io/RealityTales_CHI_SRC_2021.pdf">pdf</a>]<br>
             </p>
 
         </div>
-        
+        <br>
+        <h3>Academic Service</h3>
+        <div>
+            <p>
+                <b>Teaching Assistant at IIIT-Delhi</b><br>
+                Program Analysis (<a href="http://techtree.iiitd.edu.in/viewDescription/filename?=CSE503">CSE503</a>), Introduction to Human-Computer Interaction (<a href="http://techtree.iiitd.edu.in/viewDescription/filename?=DES102">DES102</a>)
+            </p>
+
+            <p>
+                <b>Reviewing</b><br>
+                CHI 2023, CHI 2022 Late-Breaking Work
+            </p>
+
+            <p>
+                <b>Student Volunteering</b><br>
+                CSCW 2022, CHI PLAY 2022, CSCW 2021, IndiaHCI 2021
+            </p>
+
+        </div>
+        </div>
     </div>
 </body>
 </html>
