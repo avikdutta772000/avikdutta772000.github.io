@@ -129,7 +129,7 @@
       </h2>
       [<a href="https://docs.google.com/presentation/d/1v65gOhQamHVIV1AcdEQA7opoSBBVuek5D2hjmlRhXRY/edit?usp=sharing">Slides</a>]
       <p class="post-desc">
-        Developed a chat assistant which interacts with the user and performs Advanced Data Analytics (ADA) tasks. Our approach uses multiple agents defined in a Finite-State Machine network for problem solving. There is a main agent with custom external function calls, and output from each agent and function is verified by the reviewer. We also develop a File Management System to sync the file changes made remotely to the local machine. This helps expanding OpenAI's assistant APIs to other external function calls which cannot access remote files. We design a model which is engages in useful conversation, ingests inconsistent files better, and provides accurate answers owing to the multi-agent architecture. Results show better performance over the standard ChatGPT ADA tool released in public.
+        Developed a chat assistant which interacts with the user and performs Advanced Data Analysis (ADA) tasks for a given query and data file. Our approach uses multiple agents interacting with one another in a Finite State Machine network. We use OpenAI's Assistants API with custom external function calls (PROSE tools) as agents. We also implement a versatile File Management System which allows plugging in custom functions easily that cannot access the remotely edited file. With our design, the model achieves better accuracy, engages in useful conversations, and improved file ingestion and wrangling.
       </p>
       
       <span class="post-meta">
@@ -154,7 +154,7 @@
       </h2>
       [<a href="https://drive.google.com/file/d/1HmFGFLw-gGxQ7A4plD0KmhMb6i2OwqnX/view">Report</a>]
       <p class="post-desc">
-        Used Pseudo-Relevance Feedback technique for retrieving relevant documents from a corpus for a given user query, using Indri Search Engine. The framework used REINFORCE algorithm to train a GNN-based (GAT and EGNN variations) policy network design, which gave an improvement of ~5.10% Mean Average Precision over a traditional DNN based policy network design proposed by <a href="https://dl.acm.org/doi/10.1145/3397271.3401099">Montazeralghaem et. al.</a> The entire vocabulary of the corpus formed the graph nodes, and the edge weights were obtained by taking a pre-trained neural text-embedding. This idea introduced the semantic relation among different words to play some part in the retrieval, which earlier efforts neglected.
+        Improved upon the work of <a href="https://dl.acm.org/doi/10.1145/3397271.3401099">Montazeralghaem et. al.</a>, by replacing the DNN-based policy network design with a Graph Neural Network (variations of GAT and EGNN) on a relevant document retrieval task. The GNN architecture exploits pre-trained embeddings to establish semantic relations between the retrieved document and the user query. The policy network was trained using REINFORCE algorithm. Our design performed better by ~5.10% MAP (Mean Average Precision) on TREC678 dataset over the baseline referred above.
       </p>
       
       <span class="post-meta">
@@ -178,7 +178,7 @@
       </h2>
       [<a href="https://drive.google.com/file/d/19n1T_yOGwDWlT_8-CegroasJBGj1KwGY/view">Report</a>]
       <p class="post-desc">
-        Compared the explainability of a vanilla CNN architecture by keeping the model parameters deterministic and probabilistic. Used Lime library to obtain heat maps for image explanation. For probabilistic technique, we used Bayesian Inferential techniques to obtain a distribution on the model parameters. Taking the weighted average of the lime results qualitatively summarised that deterministic approaches often are stringent and probabilitics approaches may show areas of doubt when classifying an image.
+        Performed a comparison of explainability offered by a Vanilla CNN model by keeping the model parameters either fixed or probabilistic. Used Lime library to obtain heat maps for image explanation. For probabilistic technique, we used Bayesian Inferential techniques to obtain a distribution on the model parameters. We trained such that the model parameters achieved maximum a posteriori. The weighted average of all models are taken and compared with the maximum-likelihood (deterministic) model. Through the probablistic results, we were able to identify areas of doubts better than deterministic (which were stringent), allowing future research on how to better tune the models in adversity.
       </p>
       
       <span class="post-meta">
@@ -202,7 +202,9 @@
       </h2>
       [<i>Work done in Piramal Finance (confidential)</i>]
       <p class="post-desc">
-        Used an Optical Character Recognition technology to obtain textual representation of cheque images. This information was assimilated and heursitics were designed which helped identify Balance Transfer cheques and their destination bank of transfer.
+        Used an Optical Character Recognition technology to extract texts, structures and bounding boxes from cheque images. 
+        This information was assimilated and heursitics were designed which helped identify Balance Transfer cheques and their destination bank of transfer.
+        This exercise introduced an automated way to store cheque information in the company's database, having an accuracy of ~87%.
       </p>
       
       <span class="post-meta">
@@ -223,7 +225,8 @@
       </h2>
       [<i>Work done in Piramal Finance (confidential)</i>]
       <p class="post-desc">
-        Implemented an automated call service for large scale communication of information to customers in the voice of important designations holders. Used a standard Text-To-Speech (TTS) model for obtaining an audio sample for a dynamic text. This mp3 audio sample is channeled through a trained Retrieval-based Voice Conversion (RVC) model to obtain the voice mimic of an important figure. This workflow resulted in a personalised dynamic voice message to thousands of customers, without any need for recording the actual speaker.
+        Implemented an automated call service for large scale information distribution to customers/employees in the voice of important designation holders. Used a standard Text-To-Speech (TTS) model for obtaining an audio sample for a dynamic text. This mp3 audio sample is channeled through a trained Retrieval-based Voice Conversion (RVC) model to get a voice mimic version. This message was relayed through voice calls to individuals containing important announcements or messages.
+        This effort mitigated the need for the actual speaker recording the voice, and was also put into practice by the cutomer service team.
       </p>
       
       <span class="post-meta">
@@ -243,7 +246,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Android Games</h1>
-    <p class="post-description">This section contains projects on Game Developement done during my undergraduate years.</p>
+    <p class="post-description">I enjoyed my time developing games and applications during my undergradute years. Among many interesting projects, here are two which made it to the Google Play Store for people to enjoy and play.</p>
   </header>
 
   <ul class="post-list">
@@ -257,8 +260,8 @@
       [<a href="https://github.com/avikdutta772000/Unity-Project/tree/main/Ricksy%20Run/scripts">Code</a>]
       <p class="post-desc">
         <!-- <img src="/assets/img/ricksy_run.jpg" alt="Project Image" width="100" height="100"> -->
-        A platformer game where the player has to overcome challenges by making use of two portals to travel. The blue portal is for entry, which transports the player to the position of the exit portal. A mind teaser, this game is the highest grossing app ever released by Computer Graphics Lab, IIT Kharagpur.
-        The character and enemy motion is controlled through script The character was rigged with bones and to animate it. Inverse Kinematics was applied to give a realism to the motion of the limbs. The game UI was coordinated (ordering of levels based on their difficulty) using simple C# script.
+        A platformer game where the player has to overcome challenges by making use of two portals to travel. The blue portal is for entry, which transports the player to the position of the exit portal. A mind teaser, this game is the highest grossing app ever released by Computer Graphics Society, IIT Kharagpur.
+        The character and enemy motion is controlled through C# script. The character was rigged with bones for animation. Inverse Kinematics was applied to give a realism to the motion of the limbs. The game UI/UX was coordinated (ordering of levels based on their difficulty) using simple C# script.
       </p>
       
       <span class="post-meta">
@@ -267,7 +270,7 @@
           <a class="post-tag"><nobr>Unity Game Engine</nobr>&nbsp;</a>
           <a class="post-tag"><nobr>C#</nobr>&nbsp;</a>
           <a class="post-tag"><nobr>Inverse Kinematics Animation</nobr>&nbsp;</a>
-          <a class="post-tag"><nobr>UX Design</nobr>&nbsp;</a>
+          <a class="post-tag"><nobr>UI/UX Design</nobr>&nbsp;</a>
         </span>
       </span>
 
@@ -286,7 +289,7 @@
       <p class="post-desc">
         <!-- <img src="/assets/img/ricksy_run.jpg" alt="Project Image" width="100" height="100"> -->
         The player has to drag the character in the game across the screen in such a manner that it remains inside a special bubble. The blue bubble has oxygen and increases the character's health. But it decreases the survival time which is a portrayal of score. The green and purple bubbles reduce the health as they contain poisonous gas.
-        Used C# script to code the characters motion and the instantiation of bubbles. Animated the motion of the character using skeletal animation Used Adobe illustrator to design the sprite images of the game Used code to manage scene transitions and design game UI Incorporated Interstitial and Reward based ads by using the Google Ad manager plugin. Added firebase feature of Authentication and Realtime Database.
+        Used C# script to code the characters motion and the automated instantiation of bubbles. Animated the motion of the character using skeletal animation. Used Adobe illustrator to design the sprite images of the game. Used code to manage scene transitions and designed game UI. Incorporated Interstitial and Reward based ads by using the Google Ad manager plugin. Added firebase feature of Authentication and Realtime Database for maintaining an online global leaderboard.
       </p>
       
       <span class="post-meta">
